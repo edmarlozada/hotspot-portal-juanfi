@@ -1,4 +1,4 @@
-/* juanfi_portal_v1.5b  */
+/* juanfi_portal_v1.5d  */
 /* author: Edmar Lozada */
 
 // default single vendo display name ( displayed in portal )
@@ -46,16 +46,19 @@ var cfg_VendoList = [
     Interface : "vlan-10"
   },
   {
-    Interface : "vlan-12",
+    VendoName : "Vendo v12",
     VendoIP   : "10.30.12.2",
-    VendoName : "Vendo v12"
+    Interface : "vlan-12"
   },
   {
-    Interface : "vlan-99",
-    VendoIP   : "10.30.99.2",
-    VendoName : "Vendo v99"
+    VendoName : "VendoName",
+    VendoIP   : "10.0.0.2",
+    Interface : "bridge-Main"
   }
 ];
+
+cfg_AudioCoinDrop  = "xFiles/coin-drop.mp3"
+cfg_AudioCoinStart = "xFiles/coin-start.mp3"
 
 /* ============================== */
 /* change and translate messages  */

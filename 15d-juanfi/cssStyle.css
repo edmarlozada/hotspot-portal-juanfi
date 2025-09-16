@@ -1,0 +1,706 @@
+/* juanfi_portal_v1.5b  */
+/* author: Edmar Lozada */
+
+.icon {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  margin-left: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+font-family: fontello;
+src: url("./xFiles/fontello.eot?78273339");
+src: url("./xFiles/fontello.eot?78273339#iefix") format('embedded-opentype'),
+     url("./xFiles/fontello.woff?78273339") format('woff'),
+     url("./xFiles/fontello.ttf?78273339") format('truetype'),
+     url("./xFiles/fontello.svg?78273339#fontello") format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+/* Loader */
+.cssSpinner {
+  display: none;
+  background-color: rgba(0,0,0,0.7);
+  padding-top: 140px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+}
+.cssLoader {
+  margin: auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 5px solid #00131a;
+  border: 5px dashed #00bfff;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
+/* Body */
+body {
+  font-size: 14px;
+  color: #00ffff;
+  background-color: #000000;
+  cursor: default;
+  margin: 0 auto;
+  min-width: 340px;
+  max-width: 340px;
+  padding: 10px;
+  border-collapse: collapse;
+  font-family: -apple-system, BlinkMacSystemFont, "segoe ui", Verdana, Roboto, "helvetica neue", Arial, sans-serif, "apple color emoji";
+}
+.cssMain ,
+.cssTopBar {
+  margin: 0;
+}
+
+/* Data Text */
+/* Data Label */
+/* Data Value */
+.cssLabel12 ,
+.cssLabel14 ,
+.cssLabel17 ,
+.cssLabel20 ,
+.cssLabel23 ,
+.cssValue12 ,
+.cssValue14 ,
+.cssValue17 ,
+.cssValue20 ,
+.cssValue23 {
+  font-weight: normal;
+  margin: 0;
+}
+.cssLabel12 ,
+.cssValue12 {
+  font-size: 12px;
+}
+.cssLabel14 ,
+.cssValue14 {
+  font-size: 14px;
+}
+.cssLabel17 ,
+.cssValue17 {
+  font-size: 17px;
+}
+.cssLabel20 ,
+.cssValue20 {
+  font-size: 20px;
+}
+.cssLabel23 ,
+.cssValue23 {
+  font-size: 23px;
+}
+.cssValue12 ,
+.cssValue14 ,
+.cssValue17 ,
+.cssValue20 ,
+.cssValue23 {
+  color: #00ffff;
+}
+.cssLabel12 ,
+.cssLabel14 ,
+.cssLabel17 ,
+.cssLabel20 ,
+.cssLabel23 {
+  color: #99e6ff;
+}
+#idMsgVendo  ,
+#idMsgMember ,
+#idMsgJuanFi {
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 5px;
+}
+
+
+
+/* Top Bar */
+.cssTopBar {
+  background-color: #004d66;
+  padding: 6px 6px;
+}
+/* Menu */
+.cssMenuDown {
+  float: left;
+  overflow: hidden;
+}
+.cssMenuContent {
+  display: none;
+  font-weight: normal;
+  text-align: left;
+  background-color: #002633;
+  border: 1px solid #009999;
+  position: absolute;
+}
+.cssMenuContent a {
+  display: block;
+  padding: 10px 30px 10px 20px;
+}
+.cssMenuDown:hover .cssMenuContent {
+  display: block;
+}
+.cssMenuContent a:hover {
+  background-color: #007399;
+}
+#idNetTime {
+  text-align: center;
+  font-weight: normal;
+  color: Gold;
+}
+#idOnline {
+  text-align: right;
+}
+.blinkRed {
+  color: red;
+}
+.blinkGreen {
+  color: lime;
+}
+.blinkErr {
+  color: #ffe033;
+}
+/*
+.blinkErr,
+.blinkRed,
+.blinkGreen {
+  animation: blink 2s linear infinite;
+}
+@keyframes blink {
+    0%{opacity: 1;}
+   49%{opacity: 1;}
+   60%{opacity: 0;}
+   99%{opacity: 0;}
+  100%{opacity: 1;}
+}
+*/
+
+
+/* Main */
+.cssMain {
+  margin: 0;
+  padding: 0;
+}
+
+/* Logo */
+#idMainLogo {
+  font-size: 12px;
+  text-align: center;
+  /*
+  background-color: #00131a;
+  border: 2px solid #004d66;
+  */
+  margin-top: 8px;
+  padding: 5px 15px;
+  display: none;
+}
+.cssLogoInfo {
+  font-weight: bold;
+  color: Gold;
+}
+.cssLogoHost {
+  color: #99e6ff;
+  margin: 0;
+}
+
+/* Voucher/Member */
+#idLoginTab {
+  display: none;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* Vendo */
+.cssVendoTable label {
+  font-weight: normal;
+}
+.cssVendoTable select {
+  width: 95%;
+  height: 25px;
+  color: #002633; /* DeepSkyBlue10 (InputTFontColor) */
+  background-color: #e6f9ff; /* 95 iColorInputBg */
+  padding: 3px 0;
+  border: none;
+}
+.cssVendoTable option {
+   color: #e6f9ff; /* DeepSkyBlue95 (ModOptFontColor) */
+   background-color: #00131a; /* 05 iDiviColorBg */
+}
+.cssJuanFiData ,
+.cssJuanFiInfo ,
+.cssJuanFiRate ,
+.cssJuanFiMain {
+  display: none;
+  margin: 0;
+}
+.cssJuanFiMain {
+  text-align: center;
+}
+.cssJuanFiImg {
+  width: 60%;
+}
+.cssJuanFiRate {
+  text-align: center;
+  padding-top: 10px;
+}
+.cssJuanFiInfo {
+  text-align: left;
+  padding: 10px 10px 0 10px;
+}
+.cssJuanFiData {
+  text-align: center;
+  padding-top: 20px;
+}
+.cssJuanFiValue {
+  text-align: center;
+  vertical-align: middle;
+  color: #99e6ff;
+  border: 1px solid #007399;
+  padding: 10px 0px;
+}
+#idDatTimeLft ,
+#idDatAmount ,
+#idDatVoucher {
+  padding-bottom: 20px;
+}
+
+
+/* Login */
+input {
+  font-size: 16px;
+  font-weight: bold;
+  color: #00131a;
+  background-color: #ccf2ff;
+  width: 95%;
+  height: 34px;
+  text-indent: 10px;
+  border: none;
+  outline: none;
+}
+input[type=password] {
+  /*
+  margin-top: 10px;
+  */
+}
+input::placeholder {
+  font-weight: normal;
+  letter-spacing: 1px;
+  color: #00ace6;
+}
+input:disabled {
+  background-color: #002633;
+}
+input:disabled::placeholder {
+  color: #004d66;;
+}
+input[type=checkbox] {
+  margin: 0;
+  vertical-align: middle;
+  transform: scale(.8);
+}
+label {
+  font-size: 12px;
+  font-weight: normal;
+  color: #00bfff;
+}
+#idTogglePass {
+  font-weight: bold;
+  color: #002633;
+}
+#frmHidden {
+  display: none;
+}
+
+
+/* Status */
+#idStatusData {
+  display: none;
+}
+#idTimeLeft {
+  font-size: 16px;
+  color: #00ffff;
+}
+
+
+/* User/Admin Info/Logs */
+#idViewLogs ,
+#idInfoAdmin ,
+#idInfoUser {
+  font-size: 12px;
+  text-align: left;
+  color: #99e6ff;
+  margin: 0;
+  overflow: auto;
+  min-height: 50px;
+}
+#idViewLogs ,
+#idInfoAdmin {
+  max-height: 350px;
+}
+
+/* Copyright */
+.cssCopyright, .cssCopyright a {
+  font-size: 11px;
+  font-style: italic;
+  text-align: center;
+  text-decoration:none;
+  color: #00bfff;
+  background-color: #000000;
+  margin-top: 8px;
+}
+
+
+/* Div */
+.cssMainBtn0 ,
+.cssMainBtn1 {
+  display: none;
+  margin-top: 8px;
+  text-align: left;
+  border-radius: 10px;
+}
+.cssMainBtn0 {
+  color: #7fff00;
+  background-image: linear-gradient(#264d00, #1a3300, #264d00);
+  border: 2px solid #7fff00;
+  padding: 0 15px;
+}
+.cssMainBtn1 {
+  background-color: #00001a;
+  border: 2px solid #00bfff;
+  padding: 0 15px 10px 15px;
+}
+.cssClose {
+  float:right;
+}
+.cssMainTag ,
+.cssCloseTag {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 0;
+}
+.cssMainTag {
+  text-align: left;
+}
+.cssCloseTag {
+  text-align: center;
+}
+.cssMainHR0 ,
+.cssMainHR1 {
+  background-color: #007399;
+  height: 1px;
+  border-width: 0;
+}
+.cssMainHR0 {
+  margin: 0 0 5px 0;
+}
+.cssMainHR1 {
+  margin: 5px 0 0 0;
+}
+.cssBtnBase {
+  display: none;
+  margin-top: 8px;
+  text-align: center;
+}
+
+
+/* Modal */
+.cssModalHead {
+  display: none;
+  background-color: rgba(0,0,0,0.8);
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+}
+.cssModalBodyInfo ,
+.cssModalBody {
+  text-align: center;
+  background-color: #00131a;
+  border: 2px solid #00bfff;
+  padding: 0 15px 10px 15px;
+}
+.cssModalBody {
+  min-width: 320px;
+  max-width: 320px;
+  margin: 100px auto;
+}
+.cssModalBodyInfo {
+  width: 300px;
+  margin: 80px auto;
+}
+.cssMsgModal {
+  color: gold;
+  font-weight: normal;
+  padding: 10px 0 20px 0;
+}
+
+
+/* Global Style */
+code {
+  font-weight: bold;
+  color: #00ffff;
+}
+
+
+/* [ BUTTON ] */
+button:disabled {
+  color: #004d66;
+  background: #00131a;
+  border: 1px solid #002633;
+}
+#idBtnTab_V:disabled ,
+#idBtnTab_M:disabled {
+  color: #004d66;
+  background: #00131a;
+  border: 1px solid #002633;
+}
+#idBtnTab_V ,
+#idBtnTab_M {
+  font-size: 12px;
+  font-weight: bold;
+  color: #00bfff;
+  background-image: linear-gradient(#00394d, #002633, #00394d);
+  border: 1px solid #00bfff;
+  width: 48%;
+  height: 30px;
+  margin: 0 2px;
+
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+.cssBtnVendo ,
+.cssBtnBuy ,
+.cssBtnLogin ,
+.cssBtnLogout {
+  font-size: 12px;
+  font-weight: bold;
+  width: 90%;
+  height: 36px;
+
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+.cssBtnLogin {
+  margin-top: 0px;
+  color: #00ffff;
+  background-image: linear-gradient(#004d4d, #003333, #004d4d);
+  border: 2px solid #00ffff; /* Aqua */
+}
+.cssBtnLogout {
+  margin-top: 0;
+  color: #ff0000;
+  background-image: linear-gradient(#4d0000, #330000, #4d0000);
+  border: 2px solid #ff0000; /* Red */
+}
+.cssBtnBuy {
+  margin-top: 10px;
+  color: #ffff00;
+  background-image: linear-gradient(#4d4d00, #333300, #4d4d00);
+  border: 2px solid #ffff00; /* Yellow */
+}
+.cssBtnVendo {
+  margin: 5px 0;
+  color: #00bfff;
+  background-image: linear-gradient(#00394d, #002633, #00394d);
+  border: 2px solid #00bfff; /* DeepSkyBlue */
+}
+.cssBtnMsgModal {
+  margin: 5px 0;
+  color: #00bfff;
+  background-image: linear-gradient(#00394d, #002633, #00394d);
+  border: 1px solid #00bfff; /* DeepSkyBlue */
+  padding: 5px 10px
+}
+
+
+.cssBtn {
+  font-size: 12px;
+  font-weight: bold;
+  width: 90%;
+  height: 36px;
+  margin-top: 0;
+
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+.cssBtn.Modal {
+  height: 25px;
+  width: 30%;
+  margin: 10px 5%;
+}
+.cssBtn.S {
+  height: 25px;
+  width: 40%;
+}
+.cssBtn.M {
+  height: 38px;
+}
+.cssBtn.Top {
+  margin-top: 0;
+}
+.cssBtn.Bot {
+  margin-top: 10px;
+}
+.cssBtn.Bu {
+  color: #0000ff;
+  background-image: linear-gradient(#00004d, #000033, #00004d);
+  border: 2px solid #0000ff; /* Blue */
+}
+.cssBtn.Aq {
+  color: #00ffff;
+  background-image: linear-gradient(#004d4d, #003333, #004d4d);
+  border: 2px solid #00ffff; /* Aqua */
+}
+.cssBtn.Db {
+  color: #00bfff;
+  background-image: linear-gradient(#00394d, #002633, #00394d);
+  border: 2px solid #00bfff; /* DeepSkyBlue */
+}
+.cssBtn.Li {
+  color: #00ff00;
+  background-image: linear-gradient(#004d00, #003300, #004d00);
+  border: 2px solid #00ff00; /* Lime */
+}
+.cssBtn.Ch {
+  color: #7fff00;
+  background-image: linear-gradient(#264d00, #1a3300, #264d00);
+  border: 2px solid #7fff00; /* Chartreuse */
+}
+.cssBtn.Fu {
+  color: #ff00ff;
+  background-image: linear-gradient(#4d004d, #330033, #4d004d);
+  border: 2px solid #ff00ff; /* Fuchsia */
+}
+
+.cssBtn.Rd {
+  color: #ff0000;
+  background-image: linear-gradient(#4d0000, #330000, #4d0000);
+  border: 2px solid #ff0000; /* Red */
+}
+.cssBtn.Ye {
+  color: #ffff00;
+  background-image: linear-gradient(#4d4d00, #333300, #4d4d00);
+  border: 2px solid #ffff00; /* Yellow */
+}
+.cssBtn.Gy {
+  color: #808080;
+  background-image: linear-gradient(#404040, #262626, #404040);
+  border: 2px solid #808080; /* Gray */
+}
+
+
+/* [ TABLE ] */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.cssTableStatus .cssDataL {
+  width: 40%;
+  text-align: right;
+  color: #99e6ff;
+}
+.cssTableStatus .cssDataR {
+  font-weight: normal;
+  text-align: left;
+  color: #00ffff;
+}
+.cssTableStatus td {
+  font-size: 14px;
+  text-decoration: none;
+  color: #66d9ff;
+  border: 1px solid #007399;
+  padding: 5px 5px;
+}
+
+.cssTableStatusDataL {
+  width: 40%;
+  text-align: right;
+}
+.cssTableStatusDataR {
+  font-weight: normal;
+  text-align: left;
+  color: #00ff00;
+}
+
+.cssTableVendo      ,
+.cssTableStatus ,
+.cssTableLogin {
+  display: table;
+  width: 100%;
+}
+.cssTableVendo ,
+.cssTableLogin {
+  margin: 10px 0;
+}
+.cssTableStatus {
+  margin-top: 10px;
+}
+
+.cssVendoLeft  ,
+.cssStatusLeft ,
+.cssLoginLeft  {
+  display:table-cell;
+  width:58%;
+}
+
+.cssLoginLeft {
+  text-align: left;
+  vertical-align: top;
+}
+.cssStatusLeft {
+  text-align: center;
+  vertical-align: middle;
+  color: #99e6ff;
+  border: 1px solid #007399;
+  padding: 10px 0px;
+}
+.cssLoginRight  ,
+.cssStatusRight {
+  display:table-cell;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.cssVendoLeft {
+  color: #99e6ff;
+  text-align: center;
+  vertical-align: top;
+  padding: 10px 0;
+  border: 1px solid #007399;
+}
+.cssVendoRight {
+  display:table-cell;
+  text-align: right;
+  vertical-align: top;
+}

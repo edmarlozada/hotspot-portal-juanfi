@@ -59,6 +59,8 @@ var cfg_VendoList = [
 
 cfg_AudioCoinDrop  = "xFiles/coin-drop.mp3"
 cfg_AudioCoinStart = "xFiles/coin-start.mp3"
+cfg_VolumeCoinDrop  = 0.5
+cfg_VolumeCoinStart = 0.1
 
 /* ============================== */
 /* change and translate messages  */

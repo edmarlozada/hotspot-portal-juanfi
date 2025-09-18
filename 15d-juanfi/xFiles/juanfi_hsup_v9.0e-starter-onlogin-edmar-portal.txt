@@ -69,7 +69,7 @@ if (!($eMail~"active")) do={
     system scheduler add name=$iUsr interval=0
     local i 10;while (([system scheduler find name=$iUsr]="")&&($i>0)) do={set i ($i-1);delay 1s}
   } else={
-    local iSySched [system scheduler get [find name=tester] on-event]
+    local iSySched [system scheduler get [find name=$iUsr] on-event]
     if ([find $iSySched "Extend"]>0) do={
       set iSySched [parse  $iSySched] 
       $iSySched "Extend"

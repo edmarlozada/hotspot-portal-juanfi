@@ -1,6 +1,13 @@
-/* jsConfig.txt */
-/* Edmar Lozada */
+## hotspot-portal-juanfi
+A hotspot portal, also known as a captive portal for mikrotik based juanfi system.
 
+#### What's new ( Release 2.1d )
+- recover voucher code
+- telegram notification
+- ( and many more )
+
+#### jsConfig
+```bash
 /* ===================================== */
 /* main vendo config                     */
 /* ===================================== */
@@ -36,7 +43,7 @@
 cfg.MultiVendoBy = 2; // default: 2
 
 /* auto pick vendo list config ( by: Interface ) */
-cfg.VendoList
+cfg.VendoList = [
   {
     VendoName : "Multi-Name",   // will overrule cfg.VendoName ( optional )
     WiFiName  : "Multi-WiFi",   // will overrule cfg.WiFiName  ( optional )
@@ -45,8 +52,17 @@ cfg.VendoList
     NoMember  : true,           // will overrule cfg.NoMember  ( optional )
     VendoIP   : "10.30.10.2",   // will overrule cfg.VendoIP   ( required )
     Interface : "vlan-XX"       // auto pick vendo list config ( required ) ( ref: cfg.MultiVendoBy )
+  },
+  {
+    VendoName : "Multi-Vendo",
+    WiFiName  : "Multi-WiFi",
+    NameOnly  : true,
+    NoVendo   : false,
+    NoMember  : false,
+    VendoIP   : "10.0.0.2",
+    Interface : "bridge-MAIN"
   }
-
+];
 
 /* ===================================== */
 /* Developers Hidden Config              */
@@ -99,3 +115,5 @@ cfg.VendoList
 
 /* Admin Info */
    cfg.EnableAdminInfo = true;  // default: false ( double tap on online/offline )
+
+```

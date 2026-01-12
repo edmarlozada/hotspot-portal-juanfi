@@ -69,9 +69,6 @@ cfg.VendoList = [
 /* ===================================== */
 
    cfg.Currency = "₱";
-   cfg.PrefixJuanFi = "V";         //( NOT-IMPLEMENTED )
-   cfg.PrefixCoupon = "C";
-   cfg.PrefixMember = ["M", "MN"]; //( NOT-IMPLEMENTED )
 
 /* portal menu */
    cfg.Clock = false;       // default: true

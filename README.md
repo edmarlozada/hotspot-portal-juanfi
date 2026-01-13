@@ -2,6 +2,7 @@
 A hotspot portal, also known as a captive portal for mikrotik based juanfi system.
 
 ## What's new ( Release 2.1d )
+* no third-party library used
 * recover voucher code
 * telegram notification
 * ( and many more )
@@ -10,8 +11,7 @@ A hotspot portal, also known as a captive portal for mikrotik based juanfi syste
 * Chloe Renae
 * Edmar Lozada
 
-#### **Facebook Contact**
-**https://www.facebook.com/chloe.renae.2000**
+Facebook Contact: https://www.facebook.com/chloe.renae.2000
 
 ---
 ## jsConfig:

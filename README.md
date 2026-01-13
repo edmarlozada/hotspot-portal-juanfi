@@ -92,8 +92,8 @@ cfg.VendoList = [
    cfg.NoNetAutoPause = true; // default: false ( NOT-IMPLEMENTED )
 
 /* auto login options once connected to wifi */
-   true  = login voucher automatically
-   false = manual login voucher
+/* true  = login voucher automatically */
+/* false = manual login voucher */
    cfg.AutoLogin = true; // default: false ( for voucher only )
 
 /* coindrop send telegram */

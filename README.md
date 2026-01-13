@@ -1,18 +1,20 @@
-## hotspot-portal-juanfi
+# hotspot-portal-juanfi
 A hotspot portal, also known as a captive portal for mikrotik based juanfi system.
 
-### What's new ( Release 2.1d )
-- recover voucher code
-- telegram notification
-- ( and many more )
+## What's new ( Release 2.1d )
+* recover voucher code
+* telegram notification
+* ( and many more )
 
-### Author:
-- Chloe Renae & Edmar Lozada
+## Author:
+* Chloe Renae
+* Edmar Lozada
 
-### Facebook Contact:
-- https://www.facebook.com/chloe.renae.2000
+#### **Facebook Contact**
+**https://www.facebook.com/chloe.renae.2000**
 
-### jsConfig:
+---
+## jsConfig:
 ```bash
 /* ===================================== */
 /* main vendo config                     */

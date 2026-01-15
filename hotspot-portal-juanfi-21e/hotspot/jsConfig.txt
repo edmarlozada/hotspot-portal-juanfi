@@ -11,9 +11,6 @@ cfg.WiFiName  = "Single WiFi"; // default: "Single WiFi"
 /* single vendo display name ( displayed in insert coin ) */
 cfg.VendoName = "Single Vendo"; // default: "Single Vendo"
 
-/* ip address of single vendo machine */
-cfg.VendoIP = "10.0.0.2"; // ( required )
-
 /* true  = login requires VendoCode only ( no password )                */
 /* false = login requires VendoCode & Password ( Password = VendoCode ) */
 cfg.NameOnly = false; // default: true
@@ -21,6 +18,9 @@ cfg.NameOnly = false; // default: true
 /* vendo & member options */
 cfg.NoVendo = true; // default: false
 cfg.NoMember = true; // default: false
+
+/* ip address of single vendo machine */
+cfg.VendoIP = "10.0.0.2"; // ( required )
 
 
 /* ===================================== */
@@ -43,8 +43,8 @@ cfg.VendoList = [
     Interface : "vlan-10"
   },
   {
-    VendoName : "Multi-Vendo", // will overrule cfg.WiFiName  ( optional )
     WiFiName  : "Multi-WiFi",  // will overrule cfg.VendoName ( optional )
+    VendoName : "Multi-Vendo", // will overrule cfg.WiFiName  ( optional )
     NameOnly  : true,          // will overrule cfg.NameOnly  ( optional )
     NoVendo   : false,         // will overrule cfg.NoVendo   ( optional )
     NoMember  : false,         // will overrule cfg.NoMember  ( optional )

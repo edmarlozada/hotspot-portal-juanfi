@@ -6,7 +6,7 @@
 /* ===================================== */
 
 /* ip address of single vendo machine */
-   cfg.VendoIP = "10.0.0.2"; // ( required )
+cfg.VendoIP = "10.0.0.2"; // ( required )
 
 
 /* ===================================== */
@@ -29,8 +29,8 @@ cfg.VendoList = [
     Interface : "vlan-10"
   },
   {
-    VendoName : "Multi-Vendo", // will overrule cfg.WiFiName  ( optional )
     WiFiName  : "Multi-WiFi",  // will overrule cfg.VendoName ( optional )
+    VendoName : "Multi-Vendo", // will overrule cfg.WiFiName  ( optional )
     NameOnly  : true,          // will overrule cfg.NameOnly  ( optional )
     NoVendo   : false,         // will overrule cfg.NoVendo   ( optional )
     NoMember  : false,         // will overrule cfg.NoMember  ( optional )

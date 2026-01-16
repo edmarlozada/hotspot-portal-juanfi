@@ -53,22 +53,17 @@ cfg.MultiVendoBy = 2; // default: 2
 /* auto pick vendo list config ( by: Interface ) */
 cfg.VendoList = [
   {
-    VendoName : "Multi-Name",   // will overrule cfg.VendoName ( optional )
-    WiFiName  : "Multi-WiFi",   // will overrule cfg.WiFiName  ( optional )
-    NameOnly  : false,          // will overrule cfg.NameOnly  ( optional )
-    NoVendo   : true,           // will overrule cfg.NoVendo   ( optional )
-    NoMember  : true,           // will overrule cfg.NoMember  ( optional )
-    VendoIP   : "10.30.10.2",   // will overrule cfg.VendoIP   ( required )
-    Interface : "vlan-XX"       // auto pick vendo list config ( required ) ( ref: cfg.MultiVendoBy )
+    VendoIP   : "10.30.11.2",
+    Interface : "vlan-10"
   },
   {
-    VendoName : "Multi-Vendo",
-    WiFiName  : "Multi-WiFi",
-    NameOnly  : true,
-    NoVendo   : false,
-    NoMember  : false,
-    VendoIP   : "10.0.0.2",
-    Interface : "bridge-MAIN"
+    WiFiName  : "Multi-WiFi",  // will overrule cfg.VendoName ( optional )
+    VendoName : "Multi-Vendo", // will overrule cfg.WiFiName  ( optional )
+    NameOnly  : true,          // will overrule cfg.NameOnly  ( optional )
+    NoVendo   : false,         // will overrule cfg.NoVendo   ( optional )
+    NoMember  : false,         // will overrule cfg.NoMember  ( optional )
+    VendoIP   : "10.0.0.2",    // will overrule cfg.VendoIP   ( required )
+    Interface : "bridge-MAIN"  // auto pick vendo list config ( required ) ( ref: cfg.MultiVendoBy )
   }
 ];
 

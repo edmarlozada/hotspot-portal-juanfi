@@ -21,36 +21,38 @@ Facebook Contact: https://www.facebook.com/chloe.renae.2000
 /* ===================================== */
 
 /* single wifi display name ( displayed in main portal ) */
-   cfg.WiFiName  = "Single WiFi"; // default: "Single WiFi"
+cfg.WiFiName  = "Single WiFi"; // default: "Single WiFi"
 
 /* single vendo display name ( displayed in insert coin ) */
-   cfg.VendoName = "Single Vendo"; // default: "Single Vendo"
-
-/* ip address of single vendo machine */
-   cfg.VendoIP = "10.0.0.2"; // ( required )
+cfg.VendoName = "Single Vendo"; // default: "Single Vendo"
 
 /* true  = login requires VendoCode only ( no password )                */
 /* false = login requires VendoCode & Password ( Password = VendoCode ) */
-   cfg.NameOnly = false; // default: true
+cfg.NameOnly = false; // default: true
 
 /* vendo & member options */
-   cfg.NoVendo = true; // default: false
-   cfg.NoMember = true; // default: false
+cfg.NoVendo = true; // default: false
+cfg.NoMember = true; // default: false
+
+/* ip address of single vendo machine */
+cfg.VendoIP = "10.0.0.2"; // ( required )
+cfg.FalseIP = "10.0.0.3"; // ( required )
+
 
 /* ===================================== */
 /* multi vendo config ( overrules main ) */
 /* ===================================== */
 
-/* NOT-AVAILABLE on Trial  */
+/* not-available on trial  */
 /* true  = multivendo      */
 /* false = singlevendo     */
-   cfg.MultiVendo = true; // default: false
+cfg.MultiVendo = true; // default: false
 
 /* 1 = manual pick VendoList ( NOT-IMPLEMENTED )    */
 /* 2 = auto pick VendoList   ( by Interface Name  ) */
 cfg.MultiVendoBy = 2; // default: 2
 
-/* auto pick vendo list config ( by: Interface ) */
+/* auto pick vendo list ( by: Interface ) */
 cfg.VendoList = [
   {
     VendoIP   : "10.30.11.2",
@@ -67,53 +69,53 @@ cfg.VendoList = [
   }
 ];
 
+
 /* ===================================== */
-/* Developers Hidden Config              */
+/* developers hidden config              */
 /* ===================================== */
 
-   cfg.Currency = "₱";
+/* portal config */
+cfg.Currency = "₱";
+cfg.About = "We provide internet to your devices";
+cfg.Clock = false;       // default: true
+cfg.Pause = false;       // default: true
+cfg.Logout = false;      // default: true
+cfg.StatusData = false;  // default: true ( uptime-limit/validity/login-date/valid-until )
+cfg.ValTimeData = false; // default: true ( validity countdown )
 
-/* portal menu */
-   cfg.Clock = false;       // default: true
-   cfg.Pause = false;       // default: true
-   cfg.Logout = false;      // default: true
-   cfg.StatusData = false;  // default: true ( uptime-limit/validity/login-date/valid-until )
-   cfg.ValTimeData = false; // default: true ( validity countdown )
-
-/* no internet options */
-   cfg.NetStatFile    = "netstat88.txt";
-   cfg.NoNetNoLogin   = true; // default: false
-   cfg.NoNetNoInsert  = true; // default: false
-   cfg.NoNetAutoPause = true; // default: false ( NOT-IMPLEMENTED )
-
-/* auto login options once connected to wifi */
+/* auto login options once display portal */
 /* true  = login voucher automatically */
 /* false = manual login voucher */
-   cfg.AutoLogin = true; // default: false ( for voucher only )
+cfg.AutoLogin = true; // default: false ( for voucher only )
 
-/* coindrop send telegram */
-   cfg.Telegram = true; // default: false
-   cfg.TGChatID = "-xxxxxxxxxxxxx";                                 // Telegram Group Chat ID
-   cfg.TGBToken = "xxxxxxxxxx:xxxxxxxxxxxxx-xxxxxxxxxxxxxxx-xxxxx"; // Telegram Bot Token
+/* coindrop telegram */
+cfg.Telegram = true; // default: false
+cfg.TGChatID = "-xxxxxxxxxxxxx";                                 // Telegram Group Chat ID
+cfg.TGBToken = "xxxxxxxxxx:xxxxxxxxxxxxx-xxxxxxxxxxxxxxx-xxxxx"; // Telegram Bot Token
 
-/* background sounds */
-   cfg.Audio = true;            // default: false
-   cfg.AudioLiveLoop   = true;  // default: false ( long audio looping )
-   cfg.AudioLivePerSec = false; // default: true  ( short audio / play per sec )
-   cfg.AudioLiveVolume = 0.5;   // default: 0.5
-   cfg.AudioDropVolume = 0.5;   // default: 0.5
-   cfg.AudioLiveFile   = "xFiles/coin-start0.mp3";
-   cfg.AudioDropFile   = "xFiles/coin-drop0.mp3";
+/* no internet config */
+cfg.NetStatFile    = "netstat88.txt";
+cfg.NoNetNoLogin   = true; // default: false
+cfg.NoNetNoInsert  = true; // default: false
+cfg.NoNetAutoPause = true; // default: false ( NOT-IMPLEMENTED )
 
-/* vendo internal */
-   cfg.CoinStopMax = 3;         // default: 3
-   cfg.CoinGetDelay = 500;      // default: 500
-   cfg.MikrotikDelay = 3000;    // default: 3000
-   cfg.XMLReqTimeout = 5000;    // default: 5000
-   cfg.GetCoinRecover  = false; // default: true
-   cfg.VisibilityEvent = false; // default: true
+/* vendo-audio config */
+cfg.Audio = true;            // default: false
+cfg.AudioLiveLoop   = true;  // default: false ( long audio looping )
+cfg.AudioLivePerSec = false; // default: true  ( short audio / play per sec )
+cfg.AudioLiveVolume = 0.5;   // default: 0.5
+cfg.AudioDropVolume = 0.5;   // default: 0.5
+cfg.AudioLiveFile   = "xFiles/coin-start0.mp3";
+cfg.AudioDropFile   = "xFiles/coin-drop0.mp3";
 
-/* Admin Info */
-   cfg.EnableAdminInfo = true;  // default: false ( double tap on online/offline )
+/* vendo-internal config */
+cfg.CoinStopMax = 3;         // default: 3
+cfg.CoinGetDelay = 500;      // default: 500
+cfg.MikrotikDelay = 3000;    // default: 3000
+cfg.XMLReqTimeout = 5000;    // default: 5000
+cfg.GetCoinRecover  = false; // default: true
+cfg.VisibilityEvent = false; // default: true
 
+/* admin info */
+cfg.EnableAdminInfo = true;  // default: false ( double tap on online/offline )
 ```

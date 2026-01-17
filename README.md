@@ -36,7 +36,6 @@ cfg.NoMember = true; // default: false
 
 /* ip address of single vendo machine */
 cfg.VendoIP = "10.0.0.2"; // ( required )
-cfg.FalseIP = "10.0.0.3"; // ( required )
 
 
 /* ===================================== */

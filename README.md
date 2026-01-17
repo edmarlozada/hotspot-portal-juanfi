@@ -82,7 +82,7 @@ cfg.Logout = false;      // default: true
 cfg.StatusData = false;  // default: true ( uptime-limit/validity/login-date/valid-until )
 cfg.ValTimeData = false; // default: true ( validity countdown )
 
-/* auto login options once display portal */
+/* auto login via portal */
 /* true  = login voucher automatically */
 /* false = manual login voucher */
 cfg.AutoLogin = true; // default: false ( for voucher only )

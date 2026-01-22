@@ -37,6 +37,16 @@ A hotspot portal, also known as a captive portal for mikrotik based juanfi syste
 * Edmar Lozada
 ##### Facebook Contact: https://www.facebook.com/chloe.renae.2000
 ---
+#### Support Files:
+* hsup_v9.1x-juanfi-onlogin.rsc -> compatible with this portal
+* hsup_v9.1b-juanfi-onlogout.rsc
+* netwatch-edmarportal-v2.txt -> used bye "NoNet" features
+* walled_garden-telegram-v2.txt -> hospot bypass telegram
+
+#### howto install "netwatch-edmarportal-v2.txt" && "walled_garden-telegram-v2.txt":
+1. select all file content and copy.
+2. paste to mikrotik terminal to install the script.
+---
 
 #### jsConfig:
 ```bash

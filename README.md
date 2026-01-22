@@ -49,7 +49,7 @@ A hotspot portal, also known as a captive portal for mikrotik based juanfi syste
 * netwatch-edmarportal-v2.txt -> used by "NoNet" features
 * walled_garden-telegram-v2.txt -> hospot bypass telegram
 
-#### howto install "netwatch-edmarportal-v2.txt" && "walled_garden-telegram-v2.txt":
+#### howto install "netwatch-edmarportal-v2.txt" & "walled_garden-telegram-v2.txt":
 1. select all file content and copy.
 2. paste to mikrotik terminal to install the script.
 ---

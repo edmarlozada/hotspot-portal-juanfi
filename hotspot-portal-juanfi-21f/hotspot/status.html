@@ -1,0 +1,17 @@
+<!doctype html>
+<!-- status.html -->
+
+<script>
+  var mPageVar = {
+    "page"         : "status.html",
+    "user"         : "$(username)",
+    "ip"           : "$(ip)",
+    "mac"          : "$(mac)",
+    "loggedin"     : "$(logged-in)",
+    "loginby"      : "$(login-by)",
+    "hostname"     : "$(hostname)",
+    "copyright"    : "Edmar Lozada"
+  }; // mPageVar
+
+  location.replace("./portal.html?page=status&bust="+new Date().getTime().toString().substring(5));
+</script>

@@ -1,0 +1,22 @@
+<!doctype html>
+<!-- login.html -->
+
+<script>
+  var mPageVar = {
+    "page"         : "login.html",
+    "user"         : "$(username)",
+    "ip"           : "$(ip)",
+    "mac"          : "$(mac)",
+    "error"        : "$(error)",
+    "errororig"    : "$(error-orig)",
+    "loggedin"     : "$(logged-in)",
+    "hostname"     : "$(hostname)",
+    "linkorig"     : "$(link-orig)",
+    "copyright"    : "Edmar Lozada"
+  }; // mPageVar
+
+  var mLinkPortal = "./portal.html?page=login";
+  if ("$(ip)"!="$"+"(ip)" && mPageVar.error) mLinkPortal += "&error="+mPageVar.error;
+  mLinkPortal += "&bust="+new Date().getTime().toString().substring(5);
+  location.replace(mLinkPortal);
+</script>

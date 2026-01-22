@@ -4,7 +4,7 @@ A hotspot portal, also known as a captive portal for mikrotik based juanfi syste
 ### Features ( Release 2.1f )
 
 #### portal config: (enable/disable)
-* Clock
+* Clock -> mikrotik clock (not device clock)
 * Pause -> for: voucher
 * Logout -> for: member
 * StatusData -> Uptime Limit/Validity Time/Login Date/Valid Until
@@ -35,7 +35,6 @@ A hotspot portal, also known as a captive portal for mikrotik based juanfi syste
 #### Author:
 * Chloe Renae
 * Edmar Lozada
-
 ##### Facebook Contact: https://www.facebook.com/chloe.renae.2000
 ---
 

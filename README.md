@@ -3,7 +3,7 @@ A hotspot portal, also known as a captive portal for mikrotik based juanfi syste
 
 ### Features ( Release 2.1f )
 
-#### portal config ( enable/disable )
+#### portal config:
 * Clock
 * Pause -> for: voucher
 * Logout -> for: member
@@ -17,14 +17,14 @@ A hotspot portal, also known as a captive portal for mikrotik based juanfi syste
 * GetCoinRecover -> end getcoin when refresh portal
 * VisibilityEvent -> end getcoin when lost visibility
 
-#### per vendo config / universal config
+#### per vendo config / universal config:
 * WiFiName -> wifi display name ( displayed in main portal )
 * VendoName -> vendo display name ( displayed in insert coin )
 * NameOnly -> login requires VendoCode only or Password=VendoCode
 * NoVendo -> disable insert coin 
 * NoMember -> disable member login
 
-#### portal config
+#### others:
 * multi-vendo via vlan compatible
 * no third-party library used
 * recover voucher code

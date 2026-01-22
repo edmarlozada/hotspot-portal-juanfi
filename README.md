@@ -3,6 +3,12 @@ A hotspot portal, also known as a captive portal for mikrotik based juanfi syste
 
 ### Features ( Release 2.1f )
 
+#### fix problems:
+* 0 validity bug
+* time lost -> via recover voucher ( note: must use our onLogin Script )
+* hijack macasvoucher -> by using voucher code
+* unremoved data file bug -> via our new onLogin Script
+
 #### portal config: (enable/disable)
 * Clock -> mikrotik clock (not device clock)
 * Pause -> for: voucher

@@ -3,7 +3,7 @@ A hotspot portal, also known as a captive portal for mikrotik based juanfi syste
 
 ### Features ( Release 2.1f )
 
-#### portal config:
+#### portal config: (enable/disable)
 * Clock
 * Pause -> for: voucher
 * Logout -> for: member

@@ -1,20 +1,43 @@
 # hotspot-portal-juanfi
 A hotspot portal, also known as a captive portal for mikrotik based juanfi system.
 
-## What's new ( Release 2.1d )
+### Features ( Release 2.1f )
+
+#### portal config ( enable/disable )
+* Clock
+* Pause -> for: voucher
+* Logout -> for: member
+* StatusData -> Uptime Limit/Validity Time/Login Date/Valid Until
+* UseTimeData -> Used Time
+* ValTimeData -> Validity Countdown
+* AutoLogin -> auto login via portal
+* Telegram -> coindrop send message
+* NoNetNoLogin -> no login when no net
+* NoNetNoInsert -> no insert when no net
+* GetCoinRecover -> end getcoin when refresh portal
+* VisibilityEvent -> end getcoin when lost visibility
+
+#### per vendo config / universal config
+* WiFiName -> wifi display name ( displayed in main portal )
+* VendoName -> vendo display name ( displayed in insert coin )
+* NameOnly -> login requires VendoCode only or Password=VendoCode
+* NoVendo -> disable insert coin 
+* NoMember -> disable member login
+
+#### portal config
+* multi-vendo via vlan compatible
 * no third-party library used
 * recover voucher code
-* telegram notification
 * ( and many more )
 
-## Author:
+#### Author:
 * Chloe Renae
 * Edmar Lozada
 
-Facebook Contact: https://www.facebook.com/chloe.renae.2000
-
+##### Facebook Contact: https://www.facebook.com/chloe.renae.2000
 ---
-## jsConfig:
+
+#### jsConfig:
 ```bash
 /* ===================================== */
 /* main vendo config                     */

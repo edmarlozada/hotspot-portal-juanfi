@@ -28,6 +28,8 @@ A hotspot portal, also known as a captive portal for mikrotik based juanfi syste
 * multi-vendo via vlan compatible
 * no third-party library used
 * recover voucher code
+* tested on iPhone
+* tested on ROS 6 & 7
 * ( and many more )
 
 #### Author:

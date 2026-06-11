@@ -1,0 +1,141 @@
+/* jsConfig.txt */
+/* Edmar Lozada */
+// NOTE:
+// This is a comprehensive guide to all available configurations.
+// Copy the specified line and add it to jsConfig.js file.
+// If jsConfig.js contains no configuration, the default values are applied.
+
+/* ===================================== */
+/* Main Vendo Config                     */
+/* ===================================== */
+
+/* juanfi mode ( optional ) */
+/* 0 = basice   ( default )         */
+/* 1 = extended ( NOT-IMPLEMENTED ) */
+cfg.JuanFiMode = 0; // default: 0
+
+/* default vendo machine ip address ( required ) */
+cfg.VendoIP = "10.0.0.2";
+
+/* default wifi name. displayed in main portal ( optional ) */
+cfg.WiFiName  = "Default WiFi"; // default: "Default WiFi"
+
+/* default vendo name. displayed in insert coin ( optional ) */
+cfg.VendoName = "Default Vendo"; // default: "Default Vendo"
+
+/* portal login password option ( optional ) */
+/* true  = login requires VendoCode only ( no password )                */
+/* false = login requires VendoCode & Password ( Password = VendoCode ) */
+cfg.NameOnly = false; // default: true
+
+/* universal vendo/member/portal options ( optional )*/
+/* will be overruled by individual multi vendo options */
+cfg.NoTopup   = true; // default: false ( for voucher )
+cfg.NoInsert  = true; // default: false ( for voucher )
+cfg.NoExtend  = true; // default: false ( for voucher )
+cfg.NoPause   = true; // default: false ( for voucher )
+cfg.NoRates   = true; // default: false ( for voucher )
+cfg.NoMember  = true; // default: false ( for member )
+cfg.NoLogout  = true; // default: false ( for member )
+
+cfg.NoHeader  = true; // default: false
+cfg.NoFooter  = true; // default: false
+cfg.FooterTxt = "JuanFi v4.4++";
+cfg.BarMsgTxt = "Welcome to JuanFi v4.4++";
+
+
+/* ===================================== */
+/* Multi Vendo Config ( overrules main ) */
+/* ===================================== */
+
+/* multivendo or singlevendo ( optional ) */
+cfg.MultiVendo = true; // default: false ( Not Available on Trial )
+
+/* multivendo pick index ( required if multivendo=true ) */
+/* 0 = manual pick VendoList       ( NOT-IMPLEMENTED )   */
+/* 1 = auto pick by Hostname                             */
+/* 2 = auto pick by Interface Name                       */
+/* 3 = auto pick by Network Range  ( NOT-IMPLEMENTED )   */
+cfg.MultiVendoBy = 2; // default: 2
+
+/* auto pick vendo list ( required if multivendo=true ) */
+cfg.VendoList = [
+  {
+    WiFiName  : "MAIN-WiFi",   // will overrule cfg.VendoName ( optional )
+    VendoName : "MAIN-Vendo",  // will overrule cfg.WiFiName  ( optional )
+    NameOnly  : false,         // will overrule cfg.NameOnly  ( optional )
+
+    NoTopup   : true,          // will overrule cfg.NoTopup   ( optional )
+    NoInsert  : true,          // will overrule cfg.NoInsert  ( optional )
+    NoExtend  : true,          // will overrule cfg.NoExtend  ( optional )
+    NoPause   : true,          // will overrule cfg.NoPause   ( optional )
+    NoRates   : true,          // will overrule cfg.NoRates   ( optional )
+    NoMember  : true,          // will overrule cfg.NoMember  ( optional )
+    NoLogout  : true,          // will overrule cfg.NoLogout  ( optional )
+    NoHeader  : true,          // will overrule cfg.NoHeader  ( optional )
+    NoFooter  : true,          // will overrule cfg.NoFooter  ( optional )
+    FooterTxt : "JuanFi v4.4", // will overrule cfg.BarMsgTxt ( optional )
+    BarMsgTxt : "Welcome...",  // will overrule cfg.BarMsgTxt ( optional )
+
+    Hostname  : "10.0.0.1",    // auto pick by Hostname       ( required if cfg.MultiVendoBy = 1 )
+    Interface : "bridge-MAIN", // auto pick by Interface Name ( required if cfg.MultiVendoBy = 2 )
+    NetRange  : "10.0.0.0/24", // auto pick by Network Range  ( required if cfg.MultiVendoBy = 3 )
+    VendoIP   : "10.0.0.2"     // will overrule cfg.VendoIP   ( required )
+  },
+  {
+    Interface : "vlan-11",
+    VendoIP   : "10.30.11.2"
+  },
+  {
+    Interface : "vlan-12",
+    VendoIP   : "10.30.12.2"
+  }
+];
+
+
+/* ===================================== */
+/* Developers Hidden Config              */
+/* ===================================== */
+
+/* portal config ( optional ) */
+cfg.Currency    = "₱";
+cfg.About       = "We provide internet to your device";
+cfg.Clock       = false; // default: true
+cfg.MacVoucher  = false; // default: true ( use mac as voucher code )
+cfg.AutoReLogin = false; // default: true ( for voucher only )
+cfg.APIReload   = 0;     // default: 300  ( auto reload API time delay. 0 = disable ) 5min*60sec = 300
+cfg.IdleReload  = 0;     // default: 300  ( auto reload portal delay on lost focus. 0 = disable ) 5min*60sec = 300
+cfg.GetCoinNow  = true;  // default: false  ( false = Auto Begin  / true = Modal Mode )
+
+/* no internet config ( optional ) */
+cfg.NetStatFile    = "netstat88.txt";
+cfg.NoNetNoLogin   = true; // default: false
+cfg.NoNetNoInsert  = true; // default: false
+cfg.NoNetAutoPause = true; // default: false ( NOT-IMPLEMENTED )
+
+/* vendo-audio config ( optional ) */
+cfg.Audio = false;           // default: true
+cfg.AudioDropFile   = "xFiles/coin-drop0.mp3";
+cfg.AudioDropVolume = 0.5;   // default: 0.5
+cfg.AudioLiveFile   = "xFiles/coin-start0.mp3";
+cfg.AudioLiveVolume = 0.5;   // default: 0.5
+cfg.AudioLivePerSec = false; // default: true (short audio / play per sec) [false = long audio looping]
+
+/* vendo-internal config ( optional ) */
+cfg.XMLReqRetry     = 1;     // default: 1
+cfg.XMLReqTimeout   = 5000;  // default: 5000
+cfg.MikrotikDelay   = 3000;  // default: 3000
+cfg.GetCoinRetry    = 1;     // default: 3
+cfg.GetCoinTimeout  = 5000;  // default: 1000
+cfg.GetCoinExtra    = 3;     // default: 0
+cfg.GetCoinDelay    = 500;   // default: 500
+
+cfg.GetCoinRevive   = true;  // default: false
+cfg.GetCoinStateEnd = false; // default: true
+cfg.LoginOnGetEnd   = true;  // default: false
+cfg.LogoutOnNewCoin = false; // default: true
+
+cfg.VoucherConvert  = false; // default: true
+
+
+/* ===================================== */

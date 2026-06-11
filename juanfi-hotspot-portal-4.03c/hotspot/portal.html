@@ -1,0 +1,305 @@
+<!doctype html>
+<!-- portal.html -->
+
+<html lang="en">
+<head>
+  <title>JuanFi Portal</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Expires" content=0>
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./xFiles/favicon.ico">
+
+  <script type="text/javascript">
+    var iNum = new Date().getTime().toString().substring(5);
+    document.write('<link rel="stylesheet" href="./cssStyle.css?bust='+iNum+'">');
+    document.write('<scr'+'ipt defer src="./jsLoader.js?bust='+iNum+'"></scr'+'ipt>\r\n');
+    document.write('<scr'+'ipt defer src="./jsMaster.js?bust='+iNum+'"></scr'+'ipt>\r\n');
+  </script>
+</head>
+
+<body>
+
+  <!-- css_main_body [ beg ] -->
+  <div class="css_main_body">
+
+    <!-- Portal Header -->
+    <div class="css_portal header_ph" id="idPortalHeader">
+      <div class="css_table">
+        <div class="css_table_col w50">
+          <div class="css_td header_ptl">
+            <img src="xFiles/MainPic.PNG" class="css_header_img"/>
+          </div>
+        </div>
+        <div class="css_table_col">
+          <div class="css_td header_ptr bgblack p5">
+            <div id="idWiFiName">&nbsp;</div>
+            <div id="idAboutTxt">&nbsp;</div>
+            <div>Hostpot Address: [ <code id="idHostName">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code> ]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portal Timer -->
+    <div class="css_portal timer_ph" id="idPortalTimer">
+      <div class="css_table">
+        <div class="css_table_col w60">
+          <div class="css_td timer_ptl bgblack p5" id="idFrameTimer">
+            <p id="idTimerLft" >&nbsp;</p>
+            <p id="idPODateVal">&nbsp;</p>
+            <div id="idTimeDivPTM">
+              <div id="idTimeDivVal">
+                <h5>Validity Countdown</h5>
+                <pre id="idTimerVal">&nbsp;</pre>
+              </div>
+              <div id="idTimeDivUse">
+                <h5>User Uptime</h5>
+                <pre id="idTimerUse">&nbsp;</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="css_table_col" id="idTimerBtnGrp">
+          <div class="css_td timer_ptr">
+            <button class="css_btn m gr" id="idBtnResume"> Resume Time </button>
+            <button class="css_btn m re" id="idBtnPause" > Pause Time </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portal Main -->
+    <div class="css_portal main_ph" id="idPortalMain">
+      <div class="css_label main_bar">
+        <button class="css_btn s db mr5" id="idBtnMini1"></button>
+        <button class="css_btn s db mc5" id="idBtnMini2"></button>
+        <button class="css_btn s db ml5" id="idBtnMini3"></button>
+      </div>
+      <hr class="css_portal_hr top">
+      <div class="css_table">
+        <div class="css_table_col w50 pr10" id="idDivInsert">
+          <div class="css_td main_ptl">
+            <button class="css_btn xins" id="idBtnInsert" > INSERT<br>COIN </button>
+          </div>
+        </div>
+        <div class="css_table_col">
+          <div class="css_td main_ptr">
+            <button class="css_btn m fu mtb5" id="idBtnMTopup"> Topup Voucher </button>
+            <button class="css_btn m dq mtb5" id="idBtnRate"  > Promo Rates </button>
+            <button class="css_btn m bu mtb5" id="idBtnMember"> Member Login </button>
+            <button class="css_btn m bk mtb5" id="idBtnReload"> Reload Portal </button>
+          </div>
+        </div>
+      </div>
+      <div class="css_btn_group">
+      </div>
+      <hr class="css_portal_hr bot">
+      <div class="css_section_message" id="idMsgPMain">&nbsp;<br>&nbsp;</div>
+    </div>
+
+    <!-- Portal Member -->
+    <div class="css_portal member_ph" id="idPortalMember">
+      <div class="css_td member_ptc">
+        <h2> Member Access </h2>
+        <h4>You are connected to the premium network</h4>
+      </div>
+      <hr class="css_portal_hr top">
+      <div class="css_btn_group">
+        <button class="css_btn m re mtb5" id="idBtnMLogout"> LOGOUT </button>
+        <button class="css_btn m bk mtb5" id="idBtnReload" > Reload Portal </button>
+      </div>
+      <hr class="css_portal_hr bot">
+      <div class="css_section_message" id="idMsgPMember">&nbsp;<br>&nbsp;</div>
+    </div>
+
+
+  </div>
+  <!-- css_main_body [ end ] -->
+
+  <!-- Modal Topup Voucher -->
+  <div class="css_modal topup_mh" id="idModalTopup">
+  <div class="css_modal_body">
+  <div class="css_modal_head">
+    <div class="css_label">
+      <span> Topup Voucher </span>
+      <div class="css_icon_group">
+        <img class="css_ico_hide" id="idIcoXTopup" src="./xFiles/ico-close.svg" title="Close">
+      </div>
+    </div>
+    <hr class="css_modal_hr top">
+    <div class="css_table">
+      <div class="css_table_col w60">
+        <div class="css_td topup_mtl tal">
+          <div class="group_input">
+            <input class="css_input_txt" id="idMVoucherCode" autocomplete="off" type="text">
+            <label for="idMVoucherCode">Voucher Code</label>
+          </div>
+        </div>
+      </div>
+      <div class="css_table_col">
+        <div class="css_td topup_mtr pl10">
+          <button class="css_btn m fu" id="idBtnTopupNow"> Topup Now </button>
+        </div>
+      </div>
+    </div>
+    <hr class="css_modal_hr bot">
+    <div class="css_section_message" id="idMsgMTopup">&nbsp;<br>&nbsp;</div>
+  </div>
+  </div>
+  </div>
+
+  <!-- Modal Member Login -->
+  <div class="css_modal member_mh" id="idModalMLogin">
+  <div class="css_modal_body">
+  <div class="css_modal_head">
+    <div class="css_label">
+      <span> Member Login </span>
+      <div class="css_icon_group">
+        <img class="css_ico_hide" id="idIcoXMember" src="./xFiles/ico-close.svg" title="Close">
+      </div>
+    </div>
+    <hr class="css_modal_hr top">
+    <div class="css_table">
+      <div class="css_table_col vat w60">
+        <div class="css_td member_mtl tal">
+          <div class="group_input">
+            <input class="css_input_txt" id="idMemberName" maxlength="18" autocomplete="off" type="text">
+            <label for="idMemberName">UserName</label>
+          </div>
+          <br>
+          <div class="group_input">
+            <input class="css_input_txt" id="idMemberPass" maxlength="18" autocomplete="off" type="password">
+            <label for="idMemberPass">Password</label>
+          </div>
+        </div>
+      </div>
+      <div class="css_table_col vat">
+        <div class="css_td member_mtr pl10">
+          <button class="css_btn l gr mtb5" id="idBtnMLogin" > Login </button>
+          <button class="css_btn m re mtb5" id="idBtnXMember"> Close </button>
+        </div>
+      </div>
+    </div>
+    <hr class="css_modal_hr bot">
+    <div class="css_section_message" id="idMsgMMember">&nbsp;<br>&nbsp;</div>
+  </div>
+  </div>
+  </div>
+
+  <!-- Modal JuanFi ( Insert Coin ) -->
+  <div class="css_modal juanfi_mh" id="idModalJuanFi">
+  <div class="css_modal_body">
+  <div class="css_modal_head">
+    <div class="css_label">
+      <span> Insert NOW! </span>
+    </div>
+    <hr class="css_modal_hr top">
+    <div class="css_table topup">
+      <div class="css_table_col vat w60">
+        <div class="css_td juanfi_mtl bgblack p10">
+          <div id="idVendoHead">
+            <h5>Connected Vendo</h5>
+            <div id="idVendoName">&nbsp;</div>
+          </div>
+          <p id="idJuanFiText">&nbsp;</p>
+          <p id="idJuanFiRate">&nbsp;</p>
+          <div id="idJuanFiData">
+            <h5>Price @ Time</h5>
+            <div id="idDatAmount">&nbsp;</div>
+            <h5>Timer</h5>
+            <div id="idDatTimeLft">&nbsp;</div>
+          </div>
+        </div>
+      </div>
+      <div class="css_table_col vat">
+        <div class="css_td juanfi_mtr pl10">
+          <button class="css_btn l fu mtb5" id="idBtnJInsert"> Insert Now! </button>
+          <button class="css_btn m gr mtb5" id="idBtnJDone"  > Done </button>
+          <button class="css_btn m re mtb5" id="idBtnXJuanFi"> Close </button>
+        </div>
+      </div>
+    </div>
+    <hr class="css_modal_hr bot">
+    <div class="css_section_message" id="idMsgMJuanFi">&nbsp;<br>&nbsp;</div>
+  </div>
+  </div>
+  </div>
+
+  <!-- Promo Rate -->
+  <div class="css_modal data_mh" id="idModalRate">
+  <div class="css_modal_body">
+  <div class="css_modal_head rate">
+    <div class="css_label more">
+      <span> Promo Rate </span>
+      <div class="css_icon_group">
+        <img class="css_ico_hide" id="idIcoXRate" src="./xFiles/ico-close.svg" title="Close">
+      </div>
+    </div>
+    <div class="css_rate" id="idDataRate"> </div>
+    <button class="css_btn s dq non mtb15 w30" id="idBtnXRate" >Close</button>
+  </div>
+  </div>
+  </div>
+
+  <!-- User Information -->
+  <div class="css_modal data_mh" id="idModalUserInfo">
+  <div class="css_modal_body">
+  <div class="css_modal_head UserInfo">
+    <div class="css_label more">
+      <span> User Information </span>
+      <div class="css_icon_group">
+        <img id="idIcoXUserInfo" src="./xFiles/ico-close.svg" title="Close">
+      </div>
+    </div>
+    <hr class="css_modal_hr top">
+    <div id="idUserInfoText"></div>
+    <hr class="css_modal_hr bot">
+    <div class="css_btn_group">
+      <button class="css_btn s dq bot mtb10 w30" id="idBtnXUserInfo">Close</button>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <!-- Modal Alert -->
+  <div class="css_modal alert_mh" id="idModalAlert">
+  <div class="css_modal_body">
+  <div class="css_modal_head" id="idModalWarnBody">
+    <div class="css_label more">
+      <span id="idModalWarnName"></span>
+      <div class="css_icon_group">
+        <img id="idIcoXAlert" src="./xFiles/ico-close.svg" title="Close">
+      </div>
+    </div>
+    <hr class="css_modal_hr top">
+    <p id="idModalWarnText">&nbsp;&nbsp;</p>
+    <hr class="css_modal_hr bot">
+    <div class="css_btn_group">
+      <button class="css_btn s dq bot mtb15 w30" id="idBtnXAlert">Close</button>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <!-- Modal Loader -->
+  <div class="css_modal_loader" id="idModalLoader">
+    <div class="css_spinner"></div>
+  </div>
+
+  <!-- Footer Bar -->
+  <footer class="css_footer">
+    <div>
+      <span id="idBarMenu">&#9776;</span>
+      <span id="idBarMessage"></span>
+      <span id="idBarNetTime"></span>
+    </div>
+  </footer>
+
+  <script>
+  </script>
+
+</body>
+</html>

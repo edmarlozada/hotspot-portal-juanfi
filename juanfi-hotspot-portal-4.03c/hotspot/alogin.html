@@ -1,0 +1,18 @@
+<!doctype html>
+<!-- alogin.html -->
+
+<script>
+  var mPageVar = {
+    "page"         : "alogin.html",
+    "user"         : "$(username)",
+    "ip"           : "$(ip)",
+    "mac"          : "$(mac)",
+    "loggedin"     : "$(logged-in)",
+    "loginby"      : "$(login-by)",
+    "hostname"     : "$(hostname)",
+    "linkredirect" : "$(link-redirect)",
+    "copyright"    : "Edmar Lozada"
+  }; // mPageVar
+
+  location.replace("./portal.html?page=alogin&date="+new Date().getTime());
+</script>

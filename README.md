@@ -8,27 +8,25 @@ A hotspot portal, also known as a captive portal for mikrotik based juanfi syste
 * time lost -> via recover voucher ( note: must use our onLogin Script )
 * hijack macasvoucher -> by using voucher code
 * unremoved data file bug -> via our new onLogin Script
-
-#### portal config: (enable/disable)
-* Clock -> mikrotik clock (not device clock)
-* Pause -> for: voucher
-* Logout -> for: member
-* StatusData -> Uptime Limit/Validity Time/Login Date/Valid Until
-* UseTimeData -> Used Time
-* ValTimeData -> Validity Countdown
-* AutoLogin -> auto login via portal
-* Telegram -> coindrop send message
-* NoNetNoLogin -> no login when no net
-* NoNetNoInsert -> no insert when no net
-* GetCoinRecover -> end getcoin when refresh portal
-* VisibilityEvent -> end getcoin when lost visibility
+* ( and many more )
 
 #### per vendo config / universal config:
-* WiFiName -> wifi display name ( displayed in main portal )
+* WiFiName  -> wifi display name ( displayed in main portal )
 * VendoName -> vendo display name ( displayed in insert coin )
-* NameOnly -> login requires VendoCode only or Password=VendoCode
-* NoVendo -> disable insert coin 
-* NoMember -> disable member login
+* NameOnly  -> login requires voucher only or password=voucher
+* Topup     -> login/convert voucher. ( see: VoucherConvert )
+* Insert    -> vendo insert coin. ( buy credits to time )
+* Extend    -> vendo insert coin. ( ext credits to time )
+* Pause     -> pause time.
+* Rates     -> show rates.
+* Member    -> login member.
+* Logout    -> logout member.
+
+#### vendo-internal config ( optional )
+* GetCoinRevive   -> end/revive getcoin when refresh portal.
+* GetCoinStateEnd -> end getcoin when lost visibility.
+* VoucherConvert  -> convert voucher to user-mac or keep the current.
+* ( and many more )
 
 #### others:
 * multi-vendo via vlan compatible
@@ -49,7 +47,7 @@ A hotspot portal, also known as a captive portal for mikrotik based juanfi syste
 * netwatch-edmarportal-v2.txt -> used by "NoNet" features
 * walled_garden-telegram-v2.txt -> hospot bypass telegram
 
-#### howto install "netwatch-edmarportal-v2.txt" & "walled_garden-telegram-v2.txt":
+#### howto install "netwatch-edmarportal-v2.txt" & "walled_garden-telegram-v3.txt":
 1. select all file content and copy.
 2. paste to mikrotik terminal to install the script.
 ---
